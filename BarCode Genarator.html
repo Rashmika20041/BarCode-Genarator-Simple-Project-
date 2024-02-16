@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+       <title>
+             BarCode Genarator
+       </title>
+       <script src="JsBarcode.all.min.js"></script>
+       <link rel="stylesheet" href="BarCode Genarator.css">
+  </head>
+  <body>
+    <div id="hide">
+      <h1 id="col">BarCode Genarator</h1>
+      <p id="siz"><b>Enter Barcode Value :</b>
+      <input type="text" id="text1">
+      <button id="butto" onclick="document.getElementById('hide').style.display='none'">Submit</button></p>
+    </div>
+      <svg id="barcode"></svg>
+    
+      <script>
+        document.getElementById("butto").addEventListener('click', function(){
+          var valu = document.getElementById("text1").value;
+          JsBarcode("#barcode", valu);
+        })
+      </script>
+  </body>
+</html>
